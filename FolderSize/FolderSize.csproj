@@ -9,4 +9,15 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
 
+  <ItemGroup>
+    <Content Include="bin\Debug\net7.0\FolderSize.deps.json" />
+    <Content Include="bin\Debug\net7.0\FolderSize.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net7.0\FolderSize.dll" />
+    <None Include="bin\Debug\net7.0\FolderSize.exe" />
+    <None Include="bin\Debug\net7.0\FolderSize.pdb" />
+  </ItemGroup>
+
 </Project>
