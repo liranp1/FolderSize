@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FolderSize;
+using System;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -10,6 +11,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         static void Main(string[] args)
         {
+            if (!CheckIfAdmin.IsAdministrator())
+                Console.WriteLine("user not Admin, calculation of folder size may be incorrect.");
             try
             {
                 searchDirectory = args[0];

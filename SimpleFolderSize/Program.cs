@@ -14,6 +14,8 @@ namespace SimpleFolderSize
         public static string returnSize;
         static void Main(string[] args)
         {
+            if (!CheckIfAdmin.IsAdministrator())
+                Console.WriteLine("user not Admin, calculation of folder size may be incorrect.");
             try
             {
                 searchDirectory = args[0];
@@ -50,6 +52,7 @@ namespace SimpleFolderSize
                 Console.WriteLine(ex.Message);
             }
         }
+
         public static void RunAllMethods()
         {
             GetFileSizeSumFromDirectory(searchDirectory);
